@@ -1,0 +1,3 @@
+arm-none-eabi-gcc -I. -fno-common -O0 -g -mcpu=cortex-m0 -mthumb -c -o main_timer.o main_timer.c
+arm-none-eabi-ld -Tstm32l1.ld -nostartfiles -o main_timer.elf main_timer.o
+arm-none-eabi-objcopy -Obinary main_timer.elf main_timer.bin
